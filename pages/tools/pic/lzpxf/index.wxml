@@ -1,0 +1,25 @@
+<!--pages/tools/pic/lzpxf/index.wxml-->
+<view class="y-p-20">
+  <available-num userInfo="{{userInfo}}" isLogin="{{isLogin}}"/>
+  <view class="y-upload" wx:if="{{!tempUrl}}">
+    <image class="bg-img" src="/images/tools/hbzpss.jpeg" mode="widthFix"></image>
+    <btn-upload toolName="{{toolName}}" bindupload="chooseImage">上传图片</btn-upload>
+  </view>
+  <view class="y-upload" wx:else>
+    <image class="bg-img-upload" src="{{tempUrl}}" mode="widthFix"></image>
+    <view class="delete-container">
+      <van-icon name="clear" size="28" color="#999" bindtap="handleDelete" />
+    </view>
+  </view>
+  <!-- 须知 -->
+  <quest-link toolId="{{toolName}}" code="hbzpss" type="1"></quest-link>
+  <van-row gutter="10">
+    <van-col span="8">
+      <i-btn wx:if="{{tempUrl}}" openType="share" iconClass="share" isPlain>推荐好友</i-btn>
+    </van-col>
+    <van-col span="16">
+      <i-btn wx:if="{{tempUrl && !colorUrl}}" bindtap="handleOperate">开始修复</i-btn>
+      <i-btn wx:if="{{colorUrl}}" bindtap="handleDownload">保存到相册</i-btn>
+    </van-col>
+  </van-row>
+</view>

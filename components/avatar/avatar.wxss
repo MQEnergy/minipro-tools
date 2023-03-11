@@ -1,0 +1,14 @@
+/* components/avatar/avatar.wxss */
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-image {
+  display: flex;
+}
+.desc {
+  font-size: 26rpx;
+  color: #888;
+  margin-left: 10rpx;
+}

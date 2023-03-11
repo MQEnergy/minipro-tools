@@ -1,0 +1,10 @@
+<!--components/available-num/available-num.wxml-->
+<view class="task" wx:if="{{userInfo.is_member != 3}}">
+  <view class="num">
+    <text class="time">剩余提取次数：{{userInfo.available_num || 0}}次</text>
+    <van-button round color="linear-gradient(90deg, #d0bc84 0%, #ceb05f 100%)" size="small"
+                custom-style="color:#333;width:140rpx;height:48rpx;" bindtap="handleRedirect">
+      不限次数
+    </van-button>
+  </view>
+</view>

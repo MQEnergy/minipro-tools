@@ -1,0 +1,10 @@
+/* pages/tools/text/wbjc/index.wxss */
+.text {
+  height: 300rpx !important;
+}
+.delete-container {
+  position: absolute;
+  z-index: 2;
+  right: 10rpx;
+  bottom: 10rpx;
+}

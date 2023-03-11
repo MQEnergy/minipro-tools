@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "文本纠错",
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index"
+  }
+}

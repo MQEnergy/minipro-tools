@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="tui-form">
+    <view class="tui-center">
+      <image src="/images/my/creative_process_.svg" mode=""></image>
+    </view>
+    <view class="tui-cell-text">
+      <view class="tui-text-bold tui-center">
+        <view>一拍工具包</view>
+        <view style="color: #999; font-size: 28rpx">全面的自媒体工具</view>
+      </view>
+    </view>
+    <view class="tui-btn-box">
+      <van-button type="info" bind:tap="handleLogin" color="#2755f3" round block>授权登录</van-button>
+      <view class="back-home-button"><van-button type="default" bind:tap="handleToHome" round block>返回首页</van-button></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+<!--pages/tools/video/sytq/index.wxml-->
+<van-dialog id="van-dialog"/>
+
+<view class="y-p-20">
+  <available-num userInfo="{{userInfo}}" isLogin="{{isLogin}}"/>
+  <view class="y-upload" wx:if="{{!fileInfo.url}}">
+    <image class="bg-img" style="width: 80%" src="/images/tools/sytq.svg" mode="widthFix"></image>
+    <btn-upload toolName="{{toolName}}" maxSize="10485760" acceptType="video" bindupload="chooseFile">上传视频</btn-upload>
+  </view>
+
+  <view class="y-upload" wx:else>
+    <video
+        style="width: 100%;"
+        id="myVideo"
+        src="{{fileInfo.url}}"
+        referrer-policy="origin"
+        enable-progress-gesture="{{false}}"
+        controls
+    ></video>
+    <view class="delete-container">
+      <van-icon color="#999" size="30" name="clear" bindtap="handleDelete"/>
+    </view>
+  </view>
+  <view class="result-container" wx:if="{{isFinished}}">
+    <view class="result-cell">
+      <view class="result-label" bindtap='play'>
+        <!-- 点击暂停 -->
+        <van-icon wx:if="{{tridPlay}}" color="#2755f3" size="40" name="play-circle" />
+        <!-- 点击播放 -->
+        <van-icon wx:else size="40" color="red" name="pause-circle" />
+      </view>
+      <!-- 播放进度条 -->
+      <view class="result-value">
+        <van-slider value="{{currentNum/durationNum}}" use-button-slot bind:drag="changeValue" bar-height="5px" active-color="#2755f3" style="width: 100%">
+          <view class="custom-slider-btn" slot="button">{{ current }}</view>
+        </van-slider>
+      </view>
+      <view class="result-label">{{duration}}</view>
+    </view>
+  </view>
+  <!-- 须知 -->
+  <quest-link toolId="{{toolName}}" code="spsy" type="3"></quest-link>
+  <van-row gutter="10">
+    <van-col span="8">
+      <i-btn openType="share" iconClass="share" isPlain>推荐好友</i-btn>
+    </van-col>
+    <van-col span="16">
+      <van-button wx:if="{{!isFinished}}" custom-class="custom-btn" bindtap="handleOperate" color="#2755f3" block>
+        音频提取
+      </van-button>
+      <van-button wx:else custom-class="custom-btn" bindtap="handleCopy" type="info" color="#2755f3" block>
+        复制音频地址
+      </van-button>
+    </van-col>
+  </van-row>
+</view>

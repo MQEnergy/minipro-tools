@@ -1,0 +1,39 @@
+<!--pages/index/index.wxml-->
+<van-notice-bar
+    left-icon="share-o"
+    mode="closeable"
+    text="一拍工具包 >>> 添加到我的小程序"
+/>
+<!-- 活动图 -->
+<van-overlay show="{{ show }}" z-index="9999999">
+  <view class="wrapper">
+    <view class="block">
+      <image catch:tap="handleActivity" data-path="{{activity.path || ''}}" class="" style="width: 100%; border-radius: 12rpx;" mode="widthFix" src="{{activity.pic_url || '/images/new_overlay.png'}}"/>
+      <van-icon catch:tap="handleOverLayClose" size="35" color="#fff" name="close"/>
+    </view>
+  </view>
+</van-overlay>
+
+<view class="y-p-20">
+  <view class="task" wx:if="{{userInfo.is_member != 3}}">
+    <view class="num">
+      <text class="time">剩余提取次数：{{userInfo.available_num || 0}}次</text>
+      <van-button custom-class="free" type="info" size="small" bindtap="handleDailyRedirect">免费领次数</van-button>
+    </view>
+    <view wx:if="{{!isLogin || userInfo.is_member == 1}}" class="desc" bindtap="handleMemberRedirect">开通会员，每日无限次数提取</view>
+  </view>
+  <!-- 上传 -->
+  <view class="y-upload m-20" bindtap="handleRedirect">
+    <image class="bg-img" src="/images/tools/wztq.png" mode="widthFix"></image>
+    <view class="bg-mask"></view>
+    <view class="content">
+      <view class="upload-desc">
+        <van-icon size="36" name="plus" />
+        <!--<text>此工具完全免费</text>-->
+        <text>上传图片提取文案</text>
+      </view>
+    </view>
+  </view>
+  <!-- 其他工具 -->
+  <tool-item toolName="其他工具" toolData="{{toolsList}}" bind:handleTool="handleToolRedirect" />
+</view>

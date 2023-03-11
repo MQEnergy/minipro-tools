@@ -1,0 +1,11 @@
+<!--pages/tools/tools.wxml-->
+<van-notice-bar
+  left-icon="share-o"
+  mode="closeable"
+  text="一拍工具包 >>> 添加到我的小程序"
+/>
+<view class="y-p-20">
+  <tool-item toolName="图片类工具" toolData="{{pic}}" bind:handleTool="handleToolRedirect" />
+  <tool-item toolName="文字类工具" toolData="{{text}}" bind:handleTool="handleToolRedirect" />
+  <tool-item toolName="视频类工具" toolData="{{video}}" bind:handleTool="handleToolRedirect" />
+</view>

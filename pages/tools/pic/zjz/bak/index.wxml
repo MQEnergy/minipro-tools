@@ -1,0 +1,30 @@
+<!--pages/tools/pic/zjz/index.wxml-->
+<view class="container">
+  <available-num userInfo="{{userInfo}}" isLogin="{{isLogin}}"/>
+  <view class="upload" wx:if="{{!fileInfo}}">
+    <image class="bg-img" src="/images/tools/banner_znzjz.png" mode="scaleToFill"></image>
+    <view class="bg-mask"></view>
+    <view class="uploader-container">
+      <!-- TODO 使用上传组件 -->
+    </view>
+  </view>
+  <view class="upload" wx:else>
+    <image style="width: 100%" src="{{tempFile}}" mode="widthFix"></image>
+    <view class="uploader-container">
+      <van-button type="danger" round icon="delete-o" bindtap="handleDelete">删除</van-button>
+    </view>
+  </view>
+  <view>
+    <!-- 须知-TODO -->
+  </view>
+  <van-row gutter="10">
+    <van-col span="8">
+      <i-btn openType="share" iconClass="share" isPlain>推荐好友</i-btn>
+    </van-col>
+    <van-col span="16">
+      <van-button custom-class="custom-btn" bindtap="handleOperate" color="#2755f3" block>
+        下一步处理 >
+      </van-button>
+    </van-col>
+  </van-row>
+</view>

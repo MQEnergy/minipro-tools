@@ -1,0 +1,28 @@
+/*pages/tools/pic/zjz/index.wxss */
+.container {
+  padding: 20rpx;
+}
+.uploader-container {
+  position: absolute;
+  z-index: 2;
+}
+.upload {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  min-height: 350rpx;
+}
+.upload .bg-img {
+  width: 110%;
+  height: 350rpx;
+}
+.upload .bg-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10rpx);
+}

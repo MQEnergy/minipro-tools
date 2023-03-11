@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "敏感词检查",
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index"
+  }
+}

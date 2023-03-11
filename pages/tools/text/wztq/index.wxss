@@ -1,0 +1,26 @@
+.delete-container {
+  position: absolute;
+  z-index: 2;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+.result-word {
+  border: 4rpx solid #D9E5FF;
+  border-radius: 12rpx;
+  overflow: scroll;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  height: 200rpx;
+  position: relative;
+  background: #fff;
+}
+.result-word .text {
+  color: #555;
+  position: relative;
+  margin: 8rpx 0;
+}
+.result-word .copy {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}

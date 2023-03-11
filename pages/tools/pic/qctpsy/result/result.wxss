@@ -1,0 +1,10 @@
+/* pages/tools/pic/qctpsy/result/result.wxss */
+.content {
+  border: 4rpx solid #D9E5FF;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

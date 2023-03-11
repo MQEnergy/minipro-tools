@@ -1,0 +1,21 @@
+var convert = function (status) {
+  var statusText
+  switch (status) {
+      case 1:
+          statusText = '非会员'
+          break;
+      case 2:
+          statusText = '会员'
+          break;
+      case 3:
+          statusText = '永久会员'
+          break;
+      default:
+          statusText = ''
+  }
+  return statusText
+}
+
+module.exports = {
+  convert: convert
+}

@@ -1,0 +1,31 @@
+/* pages/tools/text/wbjc/result/result.wxss */
+.cell {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding:  20rpx;
+  border-radius: 12rpx;
+  border: 4rpx solid #D9E5FF;
+  overflow: scroll;
+  min-height: 400rpx;
+}
+.content {
+  line-height: 50rpx;
+  color: #333;
+}
+.error {
+  text-decoration: line-through;
+  color: #555;
+}
+.e-other {
+  margin-right: 20rpx;
+}
+.line {
+  text-decoration:line-through;
+  color: red;
+}
+.right {
+  background: #D9E5FF;
+  border-radius: 6rpx;
+  padding: 6rpx;
+  color: #2755f3;
+}

@@ -1,0 +1,97 @@
+<!--pages/daily/daily.wxml-->
+<view>
+  <view class="header">
+    <view class="left">
+      <text class="title" style="margin-bottom: 6rpx;">已连续签到{{userInfo.sign_num}}天</text>
+      <text wx:if="{{userInfo.sign_num === 0}}">今天签到可以领取{{signList[0].available_num}}个使用次数</text>
+      <view wx:if="{{isSigned}}">
+        <text wx:if="{{userInfo.sign_num > 0 && userInfo.sign_num <= 6}}">明天签到可以领取{{signList[userInfo.sign_num].available_num}}个使用次数</text>
+      </view>
+      <view wx:else>
+        <text wx:if="{{userInfo.sign_num > 0 && userInfo.sign_num <= 5}}">明天签到可以领取{{signList[userInfo.sign_num+1].available_num}}个使用次数</text>
+        <text wx:elif="{{userInfo.sign_num === 6}}">明天签到可以领取{{signList[userInfo.sign_num].available_num}}个使用次数</text>
+      </view>
+      <text wx:if="{{userInfo.sign_num === 7}}">再接再励，明天继续~</text>
+    </view>
+    <view class="right">
+      <text style="margin-bottom: 6rpx;">剩余可用次数:</text>
+      <text style="font-weight: bold; font-size: 32rpx;">{{userInfo.available_num}}</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class='signIn'>
+      <view class='sign-com'>
+        <view class='thead'>连续签到领次数</view>
+        <view class='modle'>
+          <view class='mol'>
+            <view class='mol-line'></view>
+            <view class='mol-ites'>
+              <block wx:for="{{signList}}" wx:key="index">
+                <view class="ite {{userInfo.sign_num >= item.day_time ? 'hover' : ''}}">
+                  <label class='n'>+{{item.available_num}}</label>
+                </view>
+              </block>
+            </view>
+          </view>
+          <view class='moday'>
+            <label class='dd' wx:for="{{[1,2,3,4,5,6,7]}}" wx:key="index">{{item}}天</label>
+          </view>
+        </view>
+        <view class='the-btn' wx:if="{{isLogin}}">
+          <van-skeleton row="1" row-class="btn-skeleton" loading="{{loading}}"/>
+          <view wx:if="{{loading === false}}">
+            <view class="btn" wx:if="{{isSigned === true}}">
+              <van-button custom-class="custom-btn" disabled plain type="info">已签到</van-button>
+              <view class="video">
+                <van-button custom-class="custom-btn" block icon="video" color="#2755f3" type="info" bindtap="handleAds">
+                  翻倍领取签到奖励
+                </van-button>
+              </view>
+            </view>
+            <view wx:if="{{isSigned === false}}">
+              <van-button custom-class="custom-btn" type="info" color="#2755f3" block bindtap='bindSignIn'>
+                立即签到
+              </van-button>
+            </view>
+          </view>
+        </view>
+        <!-- 写法：防止页面闪动 -->
+        <view class='the-btn' wx:if="{{!isLogin && !loading}}">
+          <van-button custom-class="custom-btn" bindtap="handleTologin" color="#2755f3" block>点击授权登录
+          </van-button>
+        </view>
+      </view>
+    </view>
+    <view class="task">
+      <view class='thead'>做任务领次数（每日任务）</view>
+      <view wx:if="{{isLogin}}">
+        <van-skeleton title avatar row="1" title-class="title-skeleton" avatar-class="avatar-skeleton" row-class="row-skeleton" loading="{{loading}}"/>
+        <view wx:if="{{loading}}" class="my-skeleton">
+          <van-skeleton title avatar row="1" title-class="title-skeleton" avatar-class="avatar-skeleton" row-class="row-skeleton" loading="{{loading}}"/>
+        </view>
+      </view>
+
+      <block wx:if="{{taskList.length > 0}}">
+        <view wx:for="{{taskList}}" wx:key="index" class="task-index">
+          <view class="left y-h-c">
+            <view class="image">
+              <van-icon name="{{item.icon_class}}" color="#2755f3" size="48rpx"/>
+            </view>
+            <view class="desc">
+              <text>{{item.name}}({{item.curr_num}}/{{item.finish_num}})</text>
+              <text class="text">{{item.desc}}</text>
+            </view>
+          </view>
+          <van-button wx:if="{{item.id == 1}}" round type="info" color="#2755f3" size="small" data-id="{{item.id}}" bindtap="handleFinish">去完成</van-button>
+          <view wx:else>
+            <van-button wx:if="{{item.finish_num == item.curr_num}}" round type="info" color="#999" size="small" data-id="{{item.id}}">已完成</van-button>
+            <van-button wx:else round type="info" color="#2755f3" size="small" open-type="share" data-id="{{item.id}}" bindtap="handleFinish">去完成</van-button>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{!isLogin && taskList.length == 0}}" style="width: 60rpx;">
+        <van-empty description="暂无任务列表"/>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+<!--pages/tools/pic/zjz/detail.wxml-->
+<import src="../../../../components/we-cropper/we-cropper.wxml"/>
+<!-- 尺寸 -->
+<view class="">
+  <!-- 画布 -->
+  <view class="cropper-wrapper">
+    <template is="we-cropper" data="{{...cropperOpt}}"/>
+  </view>
+  <!-- 尺寸 -->
+  <view class="size-container">
+    <van-tabs active="{{active}}" color="#2755f3" bind:change="handleTabChange">
+      <van-tab title="一寸"></van-tab>
+      <van-tab title="小二寸"></van-tab>
+      <van-tab title="二寸"></van-tab>
+    </van-tabs>
+  </view>
+  <!-- 底部 -->
+  <view class="footer">
+    <view class="footer-container">
+      <view class="cell-container">
+        <!-- 须知-TODO -->
+      </view>
+      <view class="color-container">
+        <swiper style="height: 80rpx;" display-multiple-items="7">
+          <swiper-item wx:for="{{colorList}}" wx:key="index">
+            <view bindtap="handleChoose" data-index="{{index}}" class="color-item" style="background: {{item}}; {{item === '#fff' ? 'border: 2rpx solid #2755f3;': ''}}">
+              <van-icon wx:if="{{ curIndex === index }}" name="success" />
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+      <van-row gutter="10">
+        <van-col span="8">
+          <van-button custom-class="custom-btn" bindtap="uploadTap" plain color="#2755f3" block>
+            上传图片
+          </van-button>
+        </van-col>
+        <van-col span="16">
+          <van-button custom-class="custom-btn" bindtap="getCropperImage" color="#2755f3" block>
+            保存证件照
+          </van-button>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+</view>

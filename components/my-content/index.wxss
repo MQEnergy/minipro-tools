@@ -1,0 +1,56 @@
+/* components/my-content/index.wxss */
+.list {
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+.list .item {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+
+.image {
+  width: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.image .desc {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.more {
+  display: flex;
+  /* align-items: center; */
+  color: #888;
+  line-height: 100rpx;
+}
+
+.desc {
+  font-size: 28rpx;
+}
+
+.divider {
+  border-bottom: 2rpx solid #f7f7f7;
+}
+
+.btn::after {
+  border: none;
+}
+.btn {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}

@@ -1,0 +1,62 @@
+<!--pages/tools/video/spsy/index.wxml-->
+<van-dialog id="van-dialog"/>
+
+<view class="y-p-20">
+  <available-num userInfo="{{userInfo}}" isLogin="{{isLogin}}"/>
+  <view class="y-field" style="margin-top: 20rpx;">
+    <van-field
+        input-class="input-container"
+        value="{{ value }}"
+        type="textarea"
+        placeholder="粘贴口令或链接到此 支持：斗音、筷手、希瓜、小红淑、哔站、好砍视频、霍山小视频，更多其他视频提取 请关注陈王百口公众号"
+        border="{{ false }}"
+        bind:change="onChange"
+    />
+    <view wx:if="{{value !== ''}}" class="delete-container">
+      <van-icon name="clear" size="28" color="#999" bindtap="handleDelete"/>
+    </view>
+  </view>
+  <!-- 须知 -->
+  <quest-link toolId="{{toolName}}" code="sytq" type="3"></quest-link>
+
+  <van-row gutter="10">
+    <van-col span="8">
+      <van-button custom-class="custom-btn" plain type="info" color="#2755f3" bindtap="handleClipboard" block>
+        <view wx:if="{{value == ''}}">粘贴链接</view>
+        <view wx:else>清空内容</view>
+      </van-button>
+    </van-col>
+    <van-col span="16">
+      <van-button custom-class="custom-btn" bindtap="handleOperate" type="info" color="#2755f3" block>
+        一键祛水映
+      </van-button>
+    </van-col>
+  </van-row>
+  <!-- 解析结果 -->
+  <view wx:if="{{videoUrl}}" class="content-container">
+    <video
+        style="width: 100%; border-radius: 12rpx; margin-bottom: 10rpx;"
+        id="myVideo"
+        src="{{videoUrl}}"
+        enable-progress-gesture="{{false}}"
+        controls
+    ></video>
+    <van-row gutter="10">
+      <van-col span="8">
+        <i-btn openType="share" iconClass="share" isPlain>推荐好友</i-btn>
+      </van-col>
+      <van-col span="8">
+        <van-button custom-class="custom-btn" bindtap="handleCopy" type="info"
+                    color="#2755f3" block>
+          复制链接
+        </van-button>
+      </van-col>
+      <van-col span="8">
+        <van-button custom-class="custom-btn" bindtap="handleDownload" type="info"
+                    color="#2755f3" block>
+          保存到相册
+        </van-button>
+      </van-col>
+    </van-row>
+  </view>
+</view>

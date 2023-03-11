@@ -1,0 +1,12 @@
+<!--components/quest-link/index.wxml-->
+<wxs src="./index.wxs" module="tool" />
+<view class="content">
+  <view class="left" bindtap="handleTip">
+    <van-icon color="#2755f3" name="question" />
+    <view class="quest-title">{{tool.convert(toolId)[0]}}</view>
+  </view>
+  <view class="right" bindtap="handleLink">
+    <view class="link-title">{{tool.convert(toolId)[1]}}</view>
+    <van-icon name="arrow" />
+  </view>
+</view>

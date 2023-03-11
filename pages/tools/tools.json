@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-skeleton": "@vant/weapp/skeleton/index",
+    "tool-item": "/components/tool-item/tool-item",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
+  },
+  "navigationBarTitleText": "更多工具"
+}

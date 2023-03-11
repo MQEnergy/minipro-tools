@@ -1,0 +1,2 @@
+<!--components/safe-area/safe-area.wxml-->
+<view class="safe-area-{{area}}"/>

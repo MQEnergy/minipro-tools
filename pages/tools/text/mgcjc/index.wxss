@@ -1,0 +1,11 @@
+/* pages/tools/text/mgcjc/index.wxss */
+.tip {
+  color: #555;
+  font-size: 26rpx;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+
+.text {
+  height: 350rpx !important;
+}

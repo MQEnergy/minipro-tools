@@ -1,0 +1,4 @@
+/* components/btn/btn.wxss */
+.custom-btn {
+  border-radius: 12rpx !important;
+}

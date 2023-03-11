@@ -1,0 +1,68 @@
+/* pages/tools/video/sytq/index.wxss */
+.upload {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  min-height: 350rpx;
+}
+.result-container {
+  margin-top: 20rpx;
+  padding: 20rpx 0px;
+  border: 8rpx solid #D9E5FF;
+  border-radius: 12rpx;
+}
+.result-cell {
+  border-radius: 12rpx;
+  padding: 20rpx;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.result-cell .result-label {
+  color: #2755f3;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.result-cell .result-value {
+  width: 100%;
+  color: #2755f3;
+  font-weight: bold;
+  font-size: 28rpx;
+  margin: 0 40rpx;
+}
+.uploader-container {
+  position: absolute;
+  z-index: 2;
+}
+.delete-container {
+  position: absolute;
+  z-index: 2;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+.upload .bg-img {
+  width: 100%;
+  height: 350rpx;
+}
+.upload .bg-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10rpx);
+}
+
+/* 音频 */
+.custom-slider-btn {
+  height: 40rpx;
+  width: 80rpx;
+  text-align: center;
+  background-color: #6b8bf1;
+  border-radius: 40rpx;
+  color: #fff;
+  font-size: 22rpx;
+  line-height: 40rpx;
+}

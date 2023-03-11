@@ -1,0 +1,137 @@
+/* pages/member/member.wxss */
+page {
+  background-color: #33333a;
+}
+.wrapper {
+  width: 100%;
+}
+.inner-wrapper {
+  padding-bottom: 200rpx;
+}
+.container {
+  margin: 30rpx;
+}
+.container .title {
+  color: #fff;
+  font-size: 30rpx;
+}
+.container .exc-list {
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.container .list {
+  margin: 20rpx 0;
+}
+.exc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+.exc .image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #3a3a41;
+  margin-bottom: 20rpx;
+}
+.exc .desc {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.list .active {
+  background-color: #d0bc84;
+  color: #392311;
+}
+.meal .active {
+  color: #392311;
+}
+.meal {
+  width: 260rpx;
+  height: 220rpx;
+  border-radius: 20rpx;
+  background-color: #454548;
+  color: #fff;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30rpx;
+  position: relative;
+  overflow: hidden;
+}
+.tag-btn {
+  padding-left: 5rpx;
+}
+.moneny {
+  color: #392311;
+}
+.meal .meal-mon {
+  margin: 15rpx 0;
+}
+.meal .meal-mon .moneny-des {
+  font-size: 50rpx;
+  margin-right: 10rpx;
+  font-weight: bold;
+}
+.meal .moneny {
+  text-decoration: line-through;
+  color: #78705c;
+  font-size: 28rpx;
+}
+.meal .desc {
+  color: #fff;
+  font-size: 26rpx;
+}
+.meal .desc.active {
+  color: #78705c;
+}
+.comment {
+  margin: 30rpx 0;
+}
+
+.footer {
+  background-color: #3a3a41;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 30rpx;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.footer-btn {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.footer .desc {
+  color: #f6dca4;
+}
+.footer .mon {
+  flex: 1;
+  margin-left: 20rpx;
+}
+.btn-left {
+  width: 230rpx !important;
+}
+.countdown-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #f6dca4;
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-text {
+  color: red;
+  font-weight: bold;
+}

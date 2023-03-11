@@ -1,0 +1,21 @@
+/* components/quest-link/index.wxss */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx 0;
+  font-size: 28rpx;
+}
+
+.quest-title {
+  color: #2755f3;
+  margin-left: 8rpx;
+}
+.link-title {
+  color: #33333a;
+  margin-right: 8rpx;
+}
+.left,
+.right {
+  display: flex;
+}

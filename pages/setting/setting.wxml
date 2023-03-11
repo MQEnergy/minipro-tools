@@ -1,0 +1,14 @@
+<!--pages/setting/setting.wxml-->
+<view>
+    <my-content res="{{aboutList}}" bind:item="handleItem"/>
+    <my-content res="{{feedBackList}}" bind:item="handleItem"/>
+    <van-button custom-style="color: red; height: 100rpx" type="default" block bind:click="handleConfirm" wx:if="{{isLogin}}">退出登录</van-button>
+    <van-action-sheet
+      show="{{ show }}"
+      actions="{{ actions }}"
+      bind:cancel="handleClose"
+      bind:select="handleLogout"
+      cancel-text="取消"
+      description="你确定要退出登录吗？"
+    />
+</view>

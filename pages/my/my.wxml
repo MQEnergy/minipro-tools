@@ -1,0 +1,50 @@
+<!--pages/my/my.wxml-->
+<wxs src="/common/wxs/member-status.wxs" module="memberStatus"></wxs>
+<view style="padding-top:{{navbarTop}}px;box-sizing: border-box" class="bg">
+  <view style="height: {{navHeight}}px;line-height:{{navHeight}}px;text-align: center;">
+    <text class="title">我的</text>
+  </view>
+  <view class="header" wx:if="{{isLogin}}">
+    <view class="y-h-c">
+      <view>
+        <van-image round width="60" height="60" fit="cover" src="{{userInfo.avatar_url || ''}}"/>
+      </view>
+      <view class="nick">
+        <text class="nick_title">{{userInfo.nick_name || '普通用户'}}</text>
+        <text class="nick_desc">ID:{{userInfo.uuid || '未知错误，请退出重新登录'}}</text>
+        <!--<van-button wx:if="{{userInfo}}" type="default" size="mini">{{memberStatus.convert(userInfo.is_member || 0)}}</van-button>-->
+      </view>
+    </view>
+    <view class="right">
+      <text class="title">剩余次数</text>
+      <text class="num">{{userInfo.available_num || 0}}</text>
+    </view>
+  </view>
+  <view class="header" wx:else>
+    <view class="y-h-c" bind:tap="handleToLogin">
+      <view class="avatar">
+        <van-image round width="60" height="60" fit="cover" src="/images/logo.png"/>
+      </view>
+      <view class="nick">
+        <text class="nick_title">Hello，点击登录</text>
+        <text class="nick_desc">欢迎使用一拍工具包</text>
+      </view>
+    </view>
+  </view>
+  <!-- 会员中心 -->
+  <view class="member-center" bindtap="handleMemberRedirect">
+    <view class="y-h-c y-f-28">
+      <image src="/images/my/personal_badge.png" class="badge-png"></image>
+      <text class="member-center-text">{{ memberInfo.member_name || '普通用户' }}</text>
+      <text class="time" wx:if="{{memberInfo.end_time}}">({{ memberInfo.end_time || '' }}到期)</text>
+    </view>
+    <view>
+      <van-button round color="linear-gradient(90deg, #d0bc84 0%, #ceb05f 100%)" size="small"
+                  custom-style="color:#333;width:140rpx;height:48rpx;">
+        <text wx:if="{{!isLogin || userInfo.is_member == 1}}">立即开通</text>
+        <text wx:if="{{isLogin && userInfo.is_member == 2}}">会员中心</text>
+      </van-button>
+    </view>
+  </view>
+  <my-content res="{{settingList}}" bind:item="handleRedirect"/>
+</view>

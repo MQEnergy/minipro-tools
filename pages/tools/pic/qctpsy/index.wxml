@@ -1,0 +1,24 @@
+<!--pages/tools/pic/qctpsy/index.wxml-->
+<view hidden="{{isShow}}">
+  <view class="canvas y-c" style="width: {{canvas.width}}px;height:{{canvas.height}}px;">
+    <cropper class="cropper" src="{{src}}" bindpos="getPos"></cropper>
+  </view>
+</view>
+<view class="container" style="margin-top: 20rpx;">
+  <available-num userInfo="{{userInfo}}" isLogin="{{isLogin}}"/>
+  <view class="y-upload" wx:if="{{isShow}}">
+    <image class="bg-img" src="/images/tools/qctpsy.jpeg" mode="widthFix"></image>
+    <btn-upload toolName="{{toolName}}" bindupload="chooseImage">上传图片</btn-upload>
+  </view>
+  <quest-link wx:if="{{isShow || fileUrl}}" toolId="{{toolName}}" code="yjkt" type="1"></quest-link>
+  <view wx:if="{{!isShow}}" class="foot" style="width: 100%;height: {{100 * screenRatio}}rpx;">
+    <van-row gutter="10">
+      <van-col span="8">
+        <i-btn openType="share" iconClass="share" isPlain>推荐好友</i-btn>
+      </van-col>
+      <van-col span="16">
+        <i-btn bindtap="handleSave">去水印</i-btn>
+      </van-col>
+    </van-row>
+  </view>
+</view>

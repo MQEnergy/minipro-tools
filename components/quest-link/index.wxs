@@ -1,0 +1,49 @@
+var convert = function (status) {
+  var tool
+  switch (status) {
+    case 'hbzpss':
+      tool = ['黑白照片上色工具使用须知', '点击图像无损放大']
+      break;
+    case 'qctpsy':
+      tool = ['去除图片水印工具使用须知', '点击一键抠图']
+      break;
+    case 'wztq':
+      tool = ['图片文字识别工具使用须知', '点击文本纠错']
+      break;
+    case 'yjkt':
+      tool = ['一键抠图工具使用须知', '点击去除图片水印']
+      break;
+    case 'lzpxf':
+      tool = ['老照片修复工具使用须知', '点击黑白照片上色']
+      break;
+    case 'wsfd':
+      tool = ['图像无损放大工具使用须知', '点击黑白照片上色']
+      break;
+    case 'mgcjc':
+      tool = ['敏感词检查工具使用须知', '点击文本纠错']
+      break;
+    case 'wbjc':
+      tool = ['文本纠错工具使用须知', '点击图片文字识别']
+      break;
+    case 'spsy':
+      tool = ['视频祛水映使用须知', '点击提取视频中的音频']
+      break;
+    case 'sytq':
+      tool = ['音频提取工具使用须知', '点击视频祛水映']
+      break;
+    case 'xgmd5':
+      tool = ['修改视频md5值工具使用须知', '点击视频祛水映']
+      break;
+    case 'watq':
+      tool = ['声音文案提取使用须知', '点击提取视频中的音频']
+      break;
+    case 'spzgif':
+      tool = ['视频转gif使用须知', '点击视频祛水映']
+      break;
+  }
+  return tool
+}
+
+module.exports = {
+  convert: convert
+}

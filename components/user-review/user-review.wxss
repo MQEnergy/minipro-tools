@@ -1,0 +1,23 @@
+/* components/user-review/user-review.wxss */
+.container {
+  border-radius: 20rpx; 
+  padding: 20rpx;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+.desc {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+}
+.rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.text {
+  font-size: 24rpx;
+  color: #888;
+}

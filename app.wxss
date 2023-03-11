@@ -1,0 +1,94 @@
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+  Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+  sans-serif;
+}
+
+.custom-btn {
+  border-radius: 12rpx !important;
+}
+
+.van-uploader,
+.van-uploader__wrapper,
+.van-uploader__slot {
+  width: 100% !important;
+}
+
+.upload {
+  height: 350rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  margin-top: 20rpx;
+  border: 8rpx solid #D9E5FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg-img {
+  width: 100%;
+  height: 400rpx !important;
+}
+.bg-img-upload {
+  width: 100%;
+}
+.upload .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+  color: #666;
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+
+/* 公共样式 */
+/* 背景颜色 */
+page {
+  height: 100%;
+  background-color: #f5f5f5;
+}
+/* flex布局 */
+.y-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.y-h-c {
+  display: flex;
+  align-items: center;
+}
+/* 边距 */
+.y-p-20 {
+  padding: 20rpx;
+}
+
+/* 文字 */
+.y-f-28 {
+  font-size: 28rpx;
+}
+
+/* field */
+.y-field {
+  /*border: 4rpx solid #D9E5FF;*/
+  border-radius: 12rpx;
+  overflow: hidden;
+  /*box-shadow: 0px 1px 5px #e2e2e2;*/
+  border: 1px solid #ebedf0;
+  margin-top: 20rpx;
+  position: relative;
+}
+/* upload */
+.y-upload {
+  background-color: #fff;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+  /*border: 4rpx solid #D9E5FF;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: auto;
+}

@@ -1,0 +1,16 @@
+<!--components/user-review/user-review.wxml-->
+<wxs src="/utils/util.wxs" module="util"></wxs>
+<view class="container" style="background-color: {{backColor}}; color: {{color}};">
+  <view class="info">
+    <i-avatar shape="circle" src="{{comment.avatar_url}}" text="{{comment.nick_name}}" size="60">
+      <view slot="extend">
+        <text style="font-size: 26rpx;">{{util.dateFormat(comment.created_at * 1000, 'yyyy/MM/dd')}}</text>
+      </view>
+    </i-avatar>
+    <view class="rate">
+      <van-rate readonly gutter="{{ 0 }}" value="{{ comment.score }}" size="{{ 14 }}" color="#ffd21e" void-icon="star" void-color="#eee" />
+      <text class="text" wx:if="{{ comment.score }}">{{ util.rateData(comment.score) }}分</text>
+    </view>
+  </view>
+  <view class="desc">{{comment.content}}</view>
+</view>

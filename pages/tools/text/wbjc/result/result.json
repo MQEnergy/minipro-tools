@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "检查结果",
+  "usingComponents": {
+    "mp-html": "mp-html"
+  }
+}

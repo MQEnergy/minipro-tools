@@ -1,0 +1,18 @@
+<!--pages/tools/text/wbjc/result/result.wxml-->
+<view class="y-p-20">
+  <view class="cell">
+    <view class="content">
+      <mp-html content="{{text}}" />
+    </view>
+  </view>
+  <van-row gutter="10">
+    <van-col span="8">
+      <i-btn openType="share" iconClass="share" isPlain>推荐好友</i-btn>
+    </van-col>
+    <van-col span="16">
+      <van-button custom-class="custom-btn" bind:click="handleCopy" color="#2755f3" block>
+        复制
+      </van-button>
+    </van-col>
+  </van-row>
+</view>

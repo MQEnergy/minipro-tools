@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-image": "/miniprogram_npm/@vant/weapp/image/index",
+    "my-content": "/components/my-content/index",
+    "van-button": "/miniprogram_npm/@vant/weapp/button/index"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black"
+}

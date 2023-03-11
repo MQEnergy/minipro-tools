@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-steps": "@vant/weapp/steps/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-skeleton": "@vant/weapp/skeleton/index"
+  },
+  "navigationBarTitleText": "每日福利"
+}

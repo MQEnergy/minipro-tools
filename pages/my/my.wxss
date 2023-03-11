@@ -1,0 +1,89 @@
+/* pages/my/my.wxss */
+.bg {
+  background: linear-gradient(90deg, #CED7E6 0%, #d2d9ea 100%);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.header {
+  padding: 40rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .nick {
+  height: 100rpx;
+  margin-left: 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.header .nick .nick_title {
+  font-size: 36rpx;
+}
+.header .nick .nick_desc {
+  font-size: 24rpx;
+}
+
+.right {
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*border: 2rpx solid #D9E5FF;*/
+}
+
+.right .title {
+  font-size: 26rpx;
+  color: #999;
+}
+.right .num {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.member-center {
+  margin: 0 20rpx;
+  background: linear-gradient(90deg, #192B50 0%, #41597F 100%);
+  border-radius: 24rpx 24rpx 0px 0px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx 0 0;
+  box-sizing: border-box;
+  position: relative;
+  height: 100rpx;
+}
+.member-center .time {
+  font-size: 26rpx;
+  color: #99b2e6;
+  padding-left: 8rpx;
+}
+.badge-png {
+  width:120rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 0;
+}
+
+.member-center-text {
+  padding-left: 110rpx;
+}
+.btn {
+  width: 140rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  font-size: 22rpx;
+  background: linear-gradient(90deg, #d0bc84 0%, #ceb05f 100%);
+  color: #333;
+  border-radius: 24rpx;
+}
+.avatar {
+  filter: grayscale(100%);
+}

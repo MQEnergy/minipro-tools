@@ -1,0 +1,32 @@
+<!--pages/tools/image/hbzpss/index.wxml-->
+<view class="y-p-20">
+  <available-num userInfo="{{userInfo}}" isLogin="{{isLogin}}"/>
+  <view class="y-upload" wx:if="{{!tempUrl}}">
+    <image class="bg-img" src="/images/tools/wztq.png" mode="widthFix"></image>
+    <btn-upload toolName="{{toolName}}" uploadType="{{uploadType}}" bindupload="chooseImage">上传图片</btn-upload>
+  </view>
+  <view class="y-upload" wx:if="{{tempUrl}}">
+    <image class="bg-img-upload" src="{{tempUrl}}" mode="widthFix"></image>
+    <view class="delete-container">
+      <van-icon name="clear" size="28" color="#999" bindtap="handleDelete"/>
+    </view>
+  </view>
+  <view class="result-word" wx:if="{{wordList.length > 0}}">
+    <view wx:for="{{wordList}}" wx:key="*this" class="text">
+      {{item.words}}
+      <view class="copy">
+        <van-button round plain type="info" bindtap="handleCopy" data-temp="{{item.words}}" size="mini">复制</van-button>
+      </view>
+    </view>
+  </view>
+  <quest-link toolId="{{toolName}}" code="wbjc" type="2"></quest-link>
+  <van-row  wx:if="{{tempUrl}}" gutter="10">
+    <van-col span="8">
+      <i-btn openType="share" iconClass="share" isPlain>推荐好友</i-btn>
+    </van-col>
+    <van-col span="16">
+      <i-btn wx:if="{{wordList.length == 0}}" bindtap="handleOperate">一键提取</i-btn>
+      <i-btn wx:else bindtap="handleDownload" data-temp="{{wordList}}">复制整个内容</i-btn>
+    </van-col>
+  </van-row>
+</view>

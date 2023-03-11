@@ -1,0 +1,10 @@
+<!--components/avatar/avatar.wxml-->
+<view class="container">
+  <view class="avatar">
+    <image class="avatar-image" style="width: {{size}}rpx;height: {{size}}rpx;border-radius: {{shape === 'circle'? '50%' : radius +'rpx'}}" src="{{src}}"></image>
+  </view>
+  <view class="desc">
+    <view style="font-size: {{fontSize}}rpx">{{text}}</view>
+    <slot name="extend"></slot>
+  </view>
+</view>

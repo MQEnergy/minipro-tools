@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@vant/weapp": "^1.10.11",
+    "mp-html": "^2.4.1",
+    "spark-md5": "^3.0.2"
+  }
+}

@@ -1,0 +1,27 @@
+/* pages/help/help.wxss */
+.footer {
+  height: 200rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.call {
+  font-size: 36rpx;
+  color: #1989fa;
+  margin-bottom: 20rpx;
+  letter-spacing: 4rpx;
+}
+.btn::after {
+  border: none;
+}
+.btn {
+  font-size: 36rpx;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}

@@ -1,0 +1,11 @@
+/* pages/tools/pic/qctpsy/index.wxss */
+.canvas {
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.container {
+  padding: 0 20rpx;
+}
+.foot {
+  box-sizing: border-box;
+}

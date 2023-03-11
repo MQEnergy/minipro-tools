@@ -1,0 +1,35 @@
+<!--pages/tools/text/wbjc/index.wxml-->
+<view class="y-p-20">
+  <available-num userInfo="{{userInfo}}" isLogin="{{isLogin}}"/>
+  <view class="y-field">
+    <van-field
+      input-class="text"
+      value="{{ message }}"
+      type="textarea"
+      maxlength="2000"
+      placeholder="请输入要检查的文本，如：每个人爱号不同，所以选择不同"
+      show-word-limit
+      bind:change="onChange"
+    />
+    <view wx:if="{{message !== ''}}" class="delete-container">
+      <van-icon name="clear" size="28" color="#999" bindtap="handleDelete"/>
+    </view>
+  </view>
+  <quest-link toolId="{{toolName}}" code="wztq" type="2"></quest-link>
+  <van-row gutter="10">
+    <van-col span="8">
+      <i-btn openType="share" iconClass="share" isPlain>推荐好友</i-btn>
+    </van-col>
+    <van-col span="8">
+      <van-button custom-class="custom-btn" bind:click="handleClipboard" plain color="#2755f3" block>
+        <view wx:if="{{message == ''}}">粘贴</view>
+        <view wx:else>清空内容</view>
+      </van-button>
+    </van-col>
+    <van-col span="8">
+      <van-button custom-class="custom-btn" bind:click="handleCheck" color="#2755f3" block>
+        立即检查
+      </van-button>
+    </van-col>
+  </van-row>
+</view>

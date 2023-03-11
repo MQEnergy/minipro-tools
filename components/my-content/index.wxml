@@ -1,0 +1,46 @@
+<!--components/my-content/index.wxml-->
+<view class="list">
+  <block wx:for="{{res}}" wx:key="index">
+    <view wx:if="{{item.id === '3'}}">
+      <button class="item btn" open-type="share" data-id="{{item.id}}">
+        <view class="image">
+          <image class="desc" mode="widthFix" src="{{item.icon}}" />
+        </view>
+        <view class="content">
+          <view class="title">{{item.title}}</view>
+          <view class="more">
+            <text class="desc" wx:if="{{item.content}}">{{item.content}}</text>
+            <van-icon name="arrow" size="28rpx" />
+          </view>
+        </view>
+      </button>
+    </view>
+    <view wx:elif="{{item.id === '5'}}">
+      <button class="item btn" open-type="contact" data-id="{{item.id}}">
+        <view class="image">
+          <image class="desc" mode="widthFix" src="{{item.icon}}" />
+        </view>
+        <view class="content">
+          <view class="title">{{item.title}}</view>
+          <view class="more">
+            <text class="desc" wx:if="{{item.content}}">{{item.content}}</text>
+            <van-icon name="arrow" size="28rpx" />
+          </view>
+        </view>
+      </button>
+    </view>
+    <view wx:else class="item" bind:tap="handleItem" data-id="{{item.id}}">
+      <view class="image">
+        <image class="desc" mode="widthFix" src="{{item.icon}}" />
+      </view>
+      <view class="content">
+        <view class="title">{{item.title}}</view>
+        <view class="more">
+          <text class="desc" wx:if="{{item.content}}">{{item.content}}</text>
+          <van-icon name="arrow" size="28rpx" />
+        </view>
+      </view>
+    </view>
+    <view class="divider" wx:if="{{index !== res.length - 1}}"></view>
+  </block>
+</view>

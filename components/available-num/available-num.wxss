@@ -1,0 +1,27 @@
+/* components/available-num/available-num.wxss */
+.task {
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.task .num {
+  height: 90rpx;
+  background-color: #D9E5FF;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task .num .time {
+  color: #5072FA;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.task .num .free {
+  width:180rpx;
+  height:55rpx;
+  border:none;
+  background: linear-gradient(45deg, #537AFD 0%, #4A65F4 100%) !important;
+}

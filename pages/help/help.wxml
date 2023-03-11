@@ -1,0 +1,15 @@
+<!--pages/help/help.wxml-->
+<view>
+  <van-collapse value="{{ activeNames }}" bind:change="onChange">
+    <van-collapse-item size="large" title="怎么复制视频链接？" name="1">
+      在视频APP中找到想要提取文案的视频，点击“分享”，然后找到“复制链接”，点击即可复制
+    </van-collapse-item>
+    <van-collapse-item size="large" title="提示提取失败？" name="2">
+      请尝试使用浏览器打开链接，若浏览器中无法正常播放，则不能解析。
+    </van-collapse-item>
+  </van-collapse>
+  <view class="footer">
+    <button open-type="contact" class="call btn">联系人工客服</button> 
+    <text>在线时间：9:00～12:00 13:00～18:00</text>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/my-about/my-about.wxml-->
+<view class="container">
+  <view class="desc-logo">
+    <image class="logo-img" src="/images/logo.png" mode="aspectFill"></image>
+    <text class="info">一拍 yippai.com</text>
+  </view>
+  <view class="footer">
+    <view>Copyright © 2022 原聚动力 版权所有</view> 
+  </view>
+</view>

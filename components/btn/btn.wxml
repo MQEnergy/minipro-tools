@@ -1,0 +1,4 @@
+<!--components/btn/btn.wxml-->
+<van-button custom-class="custom-btn" open-type="{{openType}}" icon="{{iconClass}}" color="#2755f3" block="{{isBlock}}" plain="{{isPlain}}">
+  <slot></slot>
+</van-button>

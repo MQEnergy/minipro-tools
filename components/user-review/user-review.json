@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-rate": "/miniprogram_npm/@vant/weapp/rate/index",
+    "i-avatar": "/components/avatar/avatar"
+  }
+}

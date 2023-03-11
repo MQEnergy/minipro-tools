@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/my/my",
+    "pages/daily-task/daily-task",
+    "pages/tools/tools",
+    "pages/help/help",
+    "pages/setting/setting",
+    "pages/member/member",
+    "pages/feedback/feedback",
+    "pages/my-about/my-about",
+    "pages/my-agreement/my-agreement",
+    "pages/my-private/my-private",
+    "pages/tools/video/spsy/index",
+    "pages/tools/video/xgmd5/index",
+    "pages/tools/pic/hbzpss/index",
+    "pages/tools/pic/zjz/index",
+    "pages/tools/pic/yjkt/index",
+    "pages/tools/pic/qctpsy/index",
+    "pages/tools/text/wztq/index",
+    "pages/tools/text/wbjc/index",
+    "pages/tools/text/mgcjc/index",
+    "pages/tools/text/wbjc/result/result",
+    "pages/tools/video/sytq/index",
+    "pages/tools/pic/qctpsy/result/result",
+    "pages/tools/pic/lzpxf/index",
+    "pages/tools/pic/wsfd/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#2755f3"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#333",
+    "color": "#999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "/images/tabbar/home-fill.png",
+        "iconPath": "/images/tabbar/home.png"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "text": "更多工具",
+        "selectedIconPath": "/images/tabbar/tool-fill.png",
+        "iconPath": "/images/tabbar/tool.png"
+      },
+      {
+        "pagePath": "pages/daily-task/daily-task",
+        "text": "每日福利",
+        "selectedIconPath": "/images/tabbar/brand-fill.png",
+        "iconPath": "/images/tabbar/brand.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "selectedIconPath": "/images/tabbar/my-fill.png",
+        "iconPath": "/images/tabbar/my.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "i-btn": "/components/btn/btn",
+    "btn-upload": "/components/btn-upload/index",
+    "available-num": "/components/available-num/available-num",
+    "quest-link": "/components/quest-link/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "lazyCodeLoading": "requiredComponents"
+}

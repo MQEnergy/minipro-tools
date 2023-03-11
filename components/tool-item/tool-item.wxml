@@ -1,0 +1,28 @@
+<!--components/tool-item/tool-item.wxml-->
+<view>
+  <view class="title">{{toolName}}</view>
+  <view class="list">
+    <block wx:for="{{toolData}}" wx:key="index">
+      <view class="item" bindtap="handleTool" data-item="{{item}}">
+        <view class="inner">
+          <view class="image" style="background:{{item.colors.bg}}">
+            <van-icon size="20" color="{{item.colors.text}}" name="{{item.icon_class}}"/>
+          </view>
+          <view class="desc">
+            <view wx:if="{{item.name}}" class="tool-title">
+              {{item.name}}
+            </view>
+            <view wx:else class="mask-empty"></view>
+            <text class="info">{{item.desc}}</text>
+          </view>
+        </view>
+        <view wx:if="{{item.tag_name}}" class="tag-container">
+          {{item.tag_name}}
+        </view>
+        <view class="vip-badge" wx:if="{{item.member_only == 2}}">
+          <image src="/images/my/vip_badge.svg" mode=""></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

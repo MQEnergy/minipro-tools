@@ -1,0 +1,15 @@
+<!--components/btn-upload/index.wxml-->
+<view class="bg-mask"></view>
+<view class="content">
+  <van-uploader max-size='{{maxSize}}'
+                accept="{{acceptType}}"
+                bind:oversize="onOversize"
+                use-before-read
+                bind:before-read="beforeRead"
+                bind:after-read="afterRead">
+    <view class="btn">
+      <van-icon name="plus" style="margin-bottom: 10rpx;" size="36"/>
+      <slot>上传图片</slot>
+    </view>
+  </van-uploader>
+</view>

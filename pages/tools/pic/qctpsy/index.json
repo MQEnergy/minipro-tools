@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "去除图片水印",
+  "usingComponents": {
+    "cropper": "../../../../components/cropper/cropper"
+  },
+  "disableScroll": true
+}

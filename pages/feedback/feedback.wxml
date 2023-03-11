@@ -1,0 +1,15 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="y-p-20">
+  <van-field
+    input-class="feedback"
+    value="{{ message }}"
+    type="textarea"
+    title-width="60"
+    maxlength="200"
+    placeholder="请输入你的建议，我们将及时采纳并处理！"
+    show-word-limit
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+  <van-button custom-class="btn" type="default" block bind:click="handleSubmit">提交</van-button>
+</view>

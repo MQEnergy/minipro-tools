@@ -1,0 +1,7 @@
+/* pages/feedback/feedback.wxss */
+.feedback {
+  height: 450rpx !important;
+}
+.btn {
+  margin-top: 40rpx;
+}

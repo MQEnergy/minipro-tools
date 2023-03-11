@@ -1,0 +1,181 @@
+page{
+  background: #fff;
+}
+
+.back-home-button{
+  margin-top: 30rpx;
+}
+
+.container .tui-status-bar {
+  width: 100%;
+  height: 25px
+}
+
+.container .tui-header {
+  width: 100%;
+  padding: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  box-sizing: border-box
+}
+
+.container .tui-page-title {
+  width: 100%;
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #333;
+  line-height: 42rpx;
+  padding: 40rpx;
+  box-sizing: border-box
+}
+
+.container .tui-form {
+  padding-top: 50rpx
+}
+
+.container .tui-form .tui-view-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40rpx
+}
+
+.container .tui-form .tui-view-input .tui-cell-input {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding-top: 48rpx;
+  padding-bottom: 16rpx
+}
+
+.container .tui-form .tui-view-input .tui-cell-input input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding-left: 20rpx
+}
+
+.container .tui-form .tui-view-input .tui-cell-input .tui-icon-close {
+  margin-left: auto
+}
+
+.container .tui-form .tui-cell-text {
+  width: 100%;
+  padding: 24rpx 80rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between
+}
+
+.container .tui-form .tui-cell-text .tui-color-primary {
+  color: #5677fc
+}
+
+.container .tui-form .tui-cell-text .tui-text-bold {
+  font-size: 38rpx;
+  line-height: 65rpx;
+  margin: 0 auto;
+  color: #000
+}
+
+.container .tui-form .tui-center {
+  text-align: center
+}
+
+.container .tui-form .tui-btn-box {
+  width: 100%;
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  margin-top: 80rpx
+}
+
+.container .tui-login-way {
+  width: 100%;
+  font-size: 26rpx;
+  color: #5677fc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 80rpx
+}
+
+.container .tui-login-way view {
+  padding: 12rpx 0
+}
+
+.container .tui-auth-login {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding-bottom: 80rpx;
+  padding-top: 20rpx
+}
+
+.container .tui-auth-login .tui-icon-platform {
+  width: 90rpx;
+  height: 90rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 40rpx
+}
+
+.container .tui-auth-login .tui-icon-platform::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(.5) translateZ(0);
+  transform: scale(.5) translateZ(0);
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  border-radius: 180rpx;
+  border: 1rpx solid #bfbfbf
+}
+
+.container .tui-auth-login .tui-login-logo {
+  width: 60rpx;
+  height: 60rpx;
+  padding-top: 30rpx
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
+    "van-share-sheet": "/miniprogram_npm/@vant/weapp/share-sheet/index"
+  }
+}

@@ -1,0 +1,79 @@
+<!--pages/member/member.wxml-->
+<view class="wrapper">
+  <view class="inner-wrapper">
+    <view class="container" wx:if="{{excList.length}}">
+      <view class="title">会员专属特权</view>
+      <view class="exc-list">
+        <block wx:for="{{excList}}" wx:key="index">
+          <view class="exc">
+            <view class="image y-c">
+              <van-icon color="#d0bc84" size="50rpx" name="{{item.icon}}"/>
+            </view>
+            <text>{{item.txt}}</text>
+            <text class="desc">{{item.desc}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="container">
+      <view class="title">会员套餐</view>
+      <view class="list">
+        <swiper style="height: 260rpx;" display-multiple-items="2" next-margin="60rpx">
+          <swiper-item wx:for="{{memberList}}" wx:key="index" bind:tap="handleChange" data-id="{{item.id}}"
+                       data-index="{{index}}">
+            <view class="meal {{currentIndex === index ? 'active' : ''}}">
+              <view class="y-h-c y-f-28 {{currentIndex === index ? 'active' : ''}}">
+                <text>{{item.name}}</text>
+                <van-tag class="tag-btn" wx:if="{{item.tag_name}}" type="danger" size="mini">{{item.tag_name}}</van-tag>
+                <!--<van-button class="tag-btn" wx:if="{{item.tag_name}}" type="danger" size="mini">{{item.tag_name}}</van-button>-->
+              </view>
+              <view class="meal-mon">
+                <text>¥</text>
+                <text class="moneny-des">{{item.final_price}}</text>
+                <text wx:if="{{item.origin_price != 0}}" class="moneny">¥{{item.origin_price}}</text>
+              </view>
+              <text class="desc {{currentIndex === index ? 'active' : ''}}">{{item.subtitle}}</text>
+              <!-- 倒计时 -->
+              <view class="countdown-container" wx:if="{{item.end_time}}">
+                <van-count-down use-slot time="{{ item.end_time * 1000 - nowTime }}"
+                                bind:change="onCountDownChange">
+                  <view class="timeformat-container" wx:if="{{timeData.days}}">
+                    <text class="time-text">{{timeData.days}}</text>天<text class="time-text">{{timeData.hours}}</text>时<text class="time-text">{{timeData.minutes}}</text>分<text class="time-text">{{timeData.seconds}}</text>秒
+                  </view>
+                  <view class="time-container" wx:if="{{!timeData.days && timeData.hours}}">
+                    <text class="time-text">{{timeData.hours}}</text>时<text class="time-text">{{timeData.minutes}}</text>分<text class="time-text">{{timeData.seconds}}</text>秒
+                  </view>
+                  <view class="time-container" wx:if="{{!timeData.days && !timeData.hours}}">
+                    <text class="time-text">{{timeData.minutes}}</text>分<text class="time-text">{{timeData.seconds}}</text>秒
+                  </view>
+                </van-count-down>
+              </view>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+    <view class="container">
+      <view class="title">用户评价</view>
+      <view class="comment" wx:for="{{commentList}}" wx:key="index">
+        <i-user-review comment="{{item}}"></i-user-review>
+      </view>
+    </view>
+    <view class="footer">
+      <view class="footer-btn">
+        <van-button custom-class="custom-btn btn-left" custom-style="color: #f6dca4; width: 200rpx; font-weight: bold;"
+                    color="#54545b">
+          {{currentPrice.name}}
+        </van-button>
+        <view class="mon">
+          <van-button custom-class="custom-btn" block
+                      custom-style="color: #7e5119; font-weight: bold; font-size: 32rpx;" color="#f6dca4"
+                      bindtap="handlePay" block>
+            ¥{{currentPrice.final_price}}立即开通
+          </van-button>
+        </view>
+      </view>
+      <i-safe-area area="bottom"></i-safe-area>
+    </view>
+  </view>
+</view>
